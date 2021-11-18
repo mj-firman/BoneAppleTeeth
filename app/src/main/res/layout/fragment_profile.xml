@@ -62,7 +62,6 @@
             android:layout_width="214.35dp"
             android:layout_height="358.67dp"
             android:layout_marginStart="292dp"
-            android:layout_marginTop="14dp"
             android:alpha="0.5"
             android:contentDescription="vector_2"
             android:src="@drawable/vector_2" />
@@ -180,10 +179,11 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
         app:cardBackgroundColor="@color/green0"
         app:cardCornerRadius="20dp"
         app:cardElevation="5dp"

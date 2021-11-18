@@ -15,12 +15,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder> {
-    private List<Favorite> searchList = new ArrayList<>();
+    private List<Favorite> favoriteList = new ArrayList<>();
     private Context context;
 
     public FavoriteAdapter(Context context, List<Favorite> newsList) {
         this.context = context;
-        this.searchList = newsList;
+        this.favoriteList = newsList;
     }
 
     @NonNull
@@ -32,7 +32,7 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.Favori
 
     @Override
     public void onBindViewHolder(@NonNull FavoriteViewHolder holder, int position) {
-        Favorite search = searchList.get(position);
+        Favorite search = favoriteList.get(position);
 
         holder.binding.ivResep.setImageResource(search.getImagePath());
 
@@ -55,7 +55,7 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.Favori
 
     @Override
     public int getItemCount() {
-        return searchList.size();
+        return favoriteList.size();
     }
 
     static  class FavoriteViewHolder extends RecyclerView.ViewHolder {

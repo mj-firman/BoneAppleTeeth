@@ -1,6 +1,7 @@
 package com.app.boneappleteeth.ui.search.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.boneappleteeth.databinding.ItemResepBinding;
+import com.app.boneappleteeth.ui.foodpage.FoodActivity;
 import com.app.boneappleteeth.ui.search.model.Search;
 
 import java.util.ArrayList;
@@ -46,6 +48,13 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
             holder.binding.tvTitle.setText(search.getTitle());
             holder.binding.tvMenit.setText(search.getMenit());
         }
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context, FoodActivity.class));
+            }
+        });
 
     }
 

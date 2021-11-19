@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BoneAppleTeeth.NoActionBar">
         <activity
+            android:name=".ui.foodpage.FoodActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity

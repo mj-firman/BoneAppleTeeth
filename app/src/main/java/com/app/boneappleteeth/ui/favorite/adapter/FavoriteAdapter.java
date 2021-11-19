@@ -1,6 +1,7 @@
 package com.app.boneappleteeth.ui.favorite.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,12 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.boneappleteeth.databinding.ItemResepBinding;
 import com.app.boneappleteeth.ui.favorite.model.Favorite;
+import com.app.boneappleteeth.ui.foodpage.FoodActivity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder> {
-    private List<Favorite> favoriteList = new ArrayList<>();
+    private List<Favorite> favoriteList;
     private Context context;
 
     public FavoriteAdapter(Context context, List<Favorite> newsList) {
@@ -51,6 +52,13 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.Favori
         holder.binding.tvTitle.setText(search.getTitle());
         holder.binding.tvMenit.setText(search.getMenit());
         holder.binding.ivResep.setImageResource(search.getImagePath());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context, FoodActivity.class));
+            }
+        });
     }
 
     @Override
